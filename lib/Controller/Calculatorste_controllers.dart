@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 class KalkulatorController extends GetxController {
   var hasilhitung = 0.0.obs;
 
-  void tambah(double a1, double a2) {
-    double hasiltambah = a1 + a2;
+  void tambah(double angka1, double angka2) {
+    double hasiltambah = angka1 + angka2;
     hasilhitung.value = hasiltambah;
     Get.snackbar(
       "Hasil Jumlah",
@@ -13,8 +13,8 @@ class KalkulatorController extends GetxController {
     );
   }
 
-  void kurang(double a1, double a2) {
-    double hasilkurang = a1 - a2;
+  void kurang(double angka1, double angka2) {
+    double hasilkurang = angka1 - angka2;
     hasilhitung.value = hasilkurang;
     Get.snackbar(
       "Hasil Kurang",
@@ -23,8 +23,8 @@ class KalkulatorController extends GetxController {
     );
   }
 
-  void kali(double a1, double a2) {
-    double hasilkali = a1 * a2;
+  void kali(double angka1, double angka2) {
+    double hasilkali = angka1 * angka2;
     hasilhitung.value = hasilkali;
     Get.snackbar(
       "Hasil Kali",
@@ -33,8 +33,8 @@ class KalkulatorController extends GetxController {
     );
   }
 
-  void bagi(double a1, double a2) {
-    if (a2 == 0) {
+  void bagi(double angka1, double angka2) {
+    if (angka2 == 0) {
       Get.snackbar(
         "Error",
         "Tidak bisa membagi dengan nol",
@@ -42,7 +42,7 @@ class KalkulatorController extends GetxController {
       );
       return;
     }
-    double hasilbagi = a1 / a2;
+    double hasilbagi = angka1 / angka2;
     hasilhitung.value = hasilbagi;
     Get.snackbar(
       "Hasil Bagi",

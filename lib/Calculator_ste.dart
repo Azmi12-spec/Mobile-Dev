@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tes/Components/Custom_TextFIelds.dart';
+import 'package:tes/Components/Calcu_TextFields.dart';
 import 'package:tes/Controller/Calculatorste_controllers.dart';
 import 'Components/my_button.dart';
 
@@ -22,19 +22,17 @@ class KalkulatorPages extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.all(10),
-            child: CustomTextfield(
-              hint: "Input Angka 1",
-              txtController: txtangka1,
-              cornerRadius: 10,
+            child: CalcuTextfields(
+              controller: txtangka1,
+              hintText: "Input Angka 1",
               keyboardType: TextInputType.number,
             ),
           ),
           Container(
             margin : EdgeInsets.all(10),
-            child: CustomTextfield(
-              hint: "Input Angka 2",
-              txtController: txtangka2,
-              cornerRadius: 10,
+            child: CalcuTextfields(
+              controller: txtangka2,
+              hintText: "Input Angka 2",
               keyboardType: TextInputType.number,
             ),
           ),

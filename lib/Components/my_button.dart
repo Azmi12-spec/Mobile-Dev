@@ -13,7 +13,7 @@ class CustomButton extends StatelessWidget {
         text,
         style: TextStyle(
                       fontSize: 20,
-                      color: const Color.fromARGB(255, 108, 40, 235),
+                      color: const Color.fromARGB(255, 40, 235, 50),
                     ),
       ),
     );
