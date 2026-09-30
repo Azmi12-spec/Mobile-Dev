@@ -10,7 +10,7 @@ class MyTextField extends StatelessWidget {
     super.key, 
     required this.hint, 
     required this.txtController, 
-    required this.cornerRadius,
+    required this.cornerRadius, required String myHint,
 
   });
 
