@@ -10,8 +10,8 @@ class CalcuTextfields extends StatelessWidget {
     super.key,
     required this.controller,
     required this.hintText,
-    this.obscureText = false, // Default nilainya false
-    this.keyboardType, // 2. Tambahkan di constructor
+    this.obscureText = false,
+    this.keyboardType,
   });
 
   @override
@@ -19,7 +19,7 @@ class CalcuTextfields extends StatelessWidget {
     return TextField(
       controller: controller,
       obscureText: obscureText,
-      keyboardType: keyboardType, // 3. Terapkan pada TextField bawaan
+      keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(
