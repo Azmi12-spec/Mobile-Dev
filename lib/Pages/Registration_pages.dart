@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:tes/Components/Registration_TextField.dart';
-import 'package:tes/Controller/Registration_controller.dart';
-import 'Confirm_registration_page.dart';
 import 'package:get/get.dart';
 import '../Routes.dart';
 
