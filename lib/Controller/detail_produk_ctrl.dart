@@ -9,9 +9,9 @@ class DetailProdukCtrl extends GetxController {
   late double rating;
   late String namaToko;
 
-void onInit() {
+@override
+  void onInit() {
     super.onInit();
-    // Ambil data dari argumen yang dikirimkan
     final args = Get.arguments;
     namaProduk = args['namaProduk'];
     hargaProduk = args['hargaProduk'];

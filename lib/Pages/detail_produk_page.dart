@@ -1,93 +1,77 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:tes/Controller/detail_produk_ctrl.dart';
-import 'package:tes/models/produk_model.dart';
 
 class DetailProdukPage extends StatelessWidget {
-  const DetailProdukPage({super.key});
+  DetailProdukPage({super.key, });
+
 
   @override
   Widget build(BuildContext context) {
-
-  final controller = Get.put(DetailProdukCtrl());
+      final controller = Get.put(DetailProdukCtrl());
     return Scaffold(
-      appBar: AppBar(title: Text(controller.namaProduk)),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(12.0),
-        child: Card(
-          elevation: 3,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment:
-                  CrossAxisAlignment.start, // Biar full kirrio
-              children: [
-                Container(
-                  height: 200,
-                  width: double.infinity,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Image.asset(
+      
+      appBar: AppBar(title: Text("Detail Makanan")),
+
+      body: Container(
+        color: const Color(0xFFD9C5B2),
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: Card(
+            color: const Color(0xFFF2EAE1),
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            margin: EdgeInsets.all(16),
+            child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                mainAxisSize: MainAxisSize.min, // ⭐ penting
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
                     controller.imageProduk,
+                    height: 200,
+                    width: double.infinity,
                     fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) =>
-                        const Icon(Icons.image, size: 100),
                   ),
-                ),
-                const SizedBox(height: 16),
+
+                SizedBox(height: 10),
+
                 Text(
                   controller.namaProduk,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 6),
+
                 Text(
                   controller.hargaProduk,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 18, color: Colors.green),
                 ),
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    const Icon(Icons.store, color: Colors.blue, size: 18),
-                    const SizedBox(width: 6),
-                    Text(
-                      controller.namaToko,
-                      style: const TextStyle(fontSize: 14, color: Colors.grey),
-                    ),
-                    const Spacer(),
-                    const Icon(Icons.star, color: Colors.amber, size: 18),
-                    const SizedBox(width: 4),
-                    Text(
-                      "${controller.rating} (${controller.reviews} ulasan)",// ambil data
-                      style: const TextStyle(fontSize: 13, color: Colors.grey),
-                    ),
-                  ],
-                ),
-                const Text(
-                  "Deskripsi Produk",
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 6),
+
+                SizedBox(height: 10),
+
+                Text("Rating: ${controller.rating}"),
+                SizedBox(height: 10),
+                Text("Review: ${controller.reviews}"),
+
+                SizedBox(height: 10),
+
+                Text("Nama Toko: ${controller.namaToko}"),
+
+
+                SizedBox(height: 10),
+
                 Text(
-                  controller.description,
-                  style: const TextStyle(fontSize: 14, color: Colors.black87),
+                  "Deskripsi: ${controller.description}",
                 ),
               ],
             ),
           ),
         ),
       ),
+      )
     );
   }
 }
