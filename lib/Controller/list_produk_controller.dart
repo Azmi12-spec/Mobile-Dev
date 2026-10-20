@@ -2,6 +2,7 @@ import 'package:tes/models/produk_model.dart';
 import 'package:get/get.dart';
 
 class ListProdukController extends GetxController {
+  
   List<ProdukModel> listProduk = [
     ProdukModel(
       namaProduk: "Apem Original",
@@ -75,5 +76,14 @@ class ListProdukController extends GetxController {
       rating: 4.7,
       namaToko: "Apem Shofa",
     ),
-  ];
+  ].obs;
+
+
+  List<ProdukModel> dataAwal = [];
+
+  @override
+  void onInit() {
+    super.onInit();
+    dataAwal.addAll(listProduk);
+  }
 }

@@ -28,7 +28,7 @@ class DetailProdukPage extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(16),
               child: Column(
-                mainAxisSize: MainAxisSize.min, // ⭐ penting
+                mainAxisSize: MainAxisSize.min, // 
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
