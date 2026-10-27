@@ -3,6 +3,7 @@ import 'package:tes/Pages/Confirm_registration_page.dart';
 import 'package:tes/Pages/Registration_pages.dart';
 import 'package:tes/Pages/list_produk_page.dart';
 import 'package:tes/Pages/detail_produk_page.dart';
+import 'package:tes/Pages/main_menu_pages.dart';
 
 class Routes{
   //List pages yang ada di aplikasi kita 
@@ -13,6 +14,7 @@ class Routes{
   static const String login_clone = "/login-clone";
   static const String listProduk = "/list-produk";
   static const String detailProduk = "/detail-produk";
+  static const String mainmenupage = "/mainmenupage";
   // login, kalkulator dll
 
   //kita tampung kedalam array yang akan kita pasang ke main dart
@@ -21,6 +23,7 @@ class Routes{
     GetPage(name: confirmRegistration, page: ()=> ConfirmRegistrationPage()),
     GetPage(name: listProduk, page: ()=> ListProdukPage()),
     GetPage(name: detailProduk, page: ()=> DetailProdukPage()),
+    GetPage(name: mainmenupage, page: ()=> MainMenuPages()),
     //Tambahkan pages yang lain
   ];
 }
