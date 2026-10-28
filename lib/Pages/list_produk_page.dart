@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tes/Controller/list_produk_controller.dart';
-import 'package:tes/Pages/detail_produk_page.dart';
+// import 'package:tes/Pages/detail_produk_page.dart';
 import 'package:tes/Routes.dart';
 
 class ListProdukPage extends StatelessWidget {

@@ -21,7 +21,7 @@
     // return GetMaterialApp(home: KalkulatorPages());
     return GetMaterialApp(
         title: "Belajar Flutter PPLG 3",
-        initialRoute: Routes.mainmenupage,
+        initialRoute: Routes.menudrawer,
         getPages: Routes.myPages,
       );
   

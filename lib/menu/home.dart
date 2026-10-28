@@ -12,14 +12,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFD9C5B2),
-      appBar: AppBar(
-        title: const Text(
-          "Home",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-        ),
-        elevation: 0,
-        centerTitle: true,
-      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,8 +23,6 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
-
-            // ListView builder horizontal dibungkus Container(height) sesuai instruksi
             Container(
               height: 230,
               child: Obx(
